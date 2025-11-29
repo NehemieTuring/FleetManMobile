@@ -1,19 +1,43 @@
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import {Link} from "expo-router";
+import { useRouter } from "expo-router";
 import { Background } from "@react-navigation/elements";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { TouchableOpacity } from "react-native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import { NavigationContainer } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
+import Header from "../composant/Header";
+import Footer from "../composant/Footer";
+import Sidebar from "../composant/Sidebar";
+import ConducteurScreen from "./conducteur";
+import VehiculeScreen from "./vehicule";
 
 
-export default function connexion(){
+
+
+export default function Carte(){
+    const router = useRouter();
     return(
-        <Text>
-            Page de la carte
-            <Link href="/second/vehicule">{"\n"}vehicule</Link>
-            <Link href="/second/conducteur">{"\n"}conducteur</Link>
-            <Link href="/second/alerte">{"\n"}alerte</Link>
-            <Link href="/second/dashboard">{"\n"}dashboard</Link>
+        <SafeAreaView style = {styles.container}>
+            <View style ={styles.container2}>
+                <Text> Carte</Text>
+            </View>
 
-        </Text>
+            {/* Appel du Footer */}
+            <Footer />
 
+        </SafeAreaView>     
     )
 }
+
+const styles = StyleSheet.create({
+    container :{
+        flex :1,
+    },
+    container2:{
+        flex:1,
+    },
+
+});
