@@ -9,6 +9,7 @@ import AlerteScreen from "./second/alerte";
 import VehiculeScreen from "./second/vehicule";
 import Header from "./composant/Header";
 import Sidebar from "./composant/Sidebar";
+import ChoixScreen from "./second/choix";
 
 
 
@@ -21,7 +22,7 @@ export default function RootLayout() {
         headerShown: true,
         drawerActiveTintColor: "blue",
         headerTitle : "FleetMan",
-        headerStyle: { backgroundColor: "#96c0c7ff" },
+        headerStyle: { backgroundColor: "#0055ff" },
         headerTintColor: "white",
         headerTitleStyle: { fontSize: 24, fontWeight: "bold" },
         headerTitleAlign: "center",
@@ -33,6 +34,7 @@ export default function RootLayout() {
       <Drawer.Screen name="Conducteur" options={{ title: "Conducteur" }} />
       <Drawer.Screen name="Carte" options={{ title: "Carte" }} />
       <Drawer.Screen name="Alerte" options={{ title: "Alerte" }} />
+      <Drawer.Screen name="second/choix" options={{ title: "Choix", headerShown: false }} />
 
       {/*<Drawer.Screen name="ChangePassword" options={{ title: "Changer le mot de passe" }} />
         <Drawer.Screen name="Invite" options={{ title: "Inviter un ami" }} />
