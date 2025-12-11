@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
   },
 
   title2: {
+    flex:1,
     fontSize: 18,
     color: "white",
   },
@@ -105,6 +106,7 @@ const styles = StyleSheet.create({
   },
 
   link: {
+    flex:1,
     fontSize: 18,
     color: "yellow",
     marginLeft: 5, 

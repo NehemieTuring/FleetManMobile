@@ -1,15 +1,7 @@
 import React from "react";
-import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Drawer } from "expo-router/drawer";
-import DashboardScreen from "./second/dashboard";
-import AcceuilScreen from "./index";
-import ConducteurScreen from "./second/conducteur";
-import CarteScreen from "./second/carte";
-import AlerteScreen from "./second/alerte";
-import VehiculeScreen from "./second/vehicule";
-import Header from "./composant/Header";
 import Sidebar from "./composant/Sidebar";
-import ChoixScreen from "./second/choix";
+
 
 
 
@@ -34,7 +26,12 @@ export default function RootLayout() {
       <Drawer.Screen name="Conducteur" options={{ title: "Conducteur" }} />
       <Drawer.Screen name="Carte" options={{ title: "Carte" }} />
       <Drawer.Screen name="Alerte" options={{ title: "Alerte" }} />
-      <Drawer.Screen name="second/choix" options={{ title: "Choix", headerShown: false }} />
+      <Drawer.Screen name="second/choix" options={{ title: "choix", headerShown: false }} />
+      <Drawer.Screen name="second/inscription" options={{ title: "inscription", headerShown: false }} />
+      <Drawer.Screen name="second/inscriptionP" options={{ title: "inscriptionP", headerShown: false }} />
+      <Drawer.Screen name="second/inscriptionE" options={{ title: "inscriptionE", headerShown: false }} />
+      <Drawer.Screen name="second/connexion" options={{ title: "connexion", headerShown: false }} />
+      <Drawer.Screen name="second/inscription1" options={{ title: "inscription", headerShown: false }} />
 
       {/*<Drawer.Screen name="ChangePassword" options={{ title: "Changer le mot de passe" }} />
         <Drawer.Screen name="Invite" options={{ title: "Inviter un ami" }} />

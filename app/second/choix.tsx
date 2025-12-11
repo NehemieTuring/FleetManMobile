@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Pressable, Dimensions } from "react-native";
+import { View, Text, StyleSheet, Pressable, Dimensions, TouchableOpacity } from "react-native";
 import { router } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const { width } = Dimensions.get("window");
 const BUTTON_WIDTH = width * 0.5;
@@ -26,7 +27,7 @@ export default function Choix() {
   const bgFor = (hovered, pressed) => (hovered || pressed ? "#0055ff" : "#d3d3d3");
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Pressable
         accessible={true}
         accessibilityRole="button"
@@ -58,7 +59,18 @@ export default function Choix() {
       >
         <Text style={styles.buttonText}>Entreprise</Text>
       </Pressable>
-    </View>
+      {/* ----------- BOUTONS CÔTE À CÔTE ----------- */}
+            <View style={styles.buttonRow}>
+      
+              {/* BOUTON PRÉCÉDENT */}
+              <TouchableOpacity
+                style={[styles.button, styles.prevButton]}
+                onPress={() => router.push("/")}
+              >
+                <Text style={styles.buttonText}>Précédent</Text>
+              </TouchableOpacity>
+            </View>
+    </SafeAreaView>
   );
 }
 
@@ -73,18 +85,33 @@ const styles = StyleSheet.create({
     gap: 15,
   },
   button: {
-    width: BUTTON_WIDTH,
-    paddingVertical: 18,
-    borderRadius: 10,
-    alignItems: "center",
-    marginVertical: 15,
-    elevation: 3,
-  },
+  alignSelf: "stretch",
+  paddingVertical: 12,
+  borderRadius: 10,
+  alignItems: "center",
+  marginVertical: 15,
+  elevation: 3,
+},
+
   buttonText: {
     fontSize: Math.max(14, width * 0.045), // responsive, pas trop petit
     color: "#ffffff",
     fontWeight: "600",
   },
+ buttonRow: {
+  width: "100%",
+  alignItems: "center",
+},
+
+prevButton: {
+  backgroundColor: "#ffa500",
+  width: "50%",
+  alignSelf: "center",
+},
+
+  disabledButton: {
+    backgroundColor: "#888", // gris, bouton inactif
+    opacity: 0.6},
 });
 
 

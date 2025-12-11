@@ -16,22 +16,22 @@ export default function Sidebar() {
             <Ionicons name="person-circle" size={120} color="white" />
         </TouchableOpacity>
         <TouchableOpacity style={styles.item} onPress={() => router.push("/")}>
-            <Ionicons name="home" size={30} color="black" />
+            <Ionicons name="home" size={30} color="white" />
             <Text style={styles.itemText}>Acceuil</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.item} onPress={() => router.push("AjouterAmi")}>
-            <Ionicons name="person-add" size={30} color="black" />
+            <Ionicons name="person-add" size={30} color="white" />
             <Text style={styles.itemText}>Inviter un ami</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.item} onPress={() => router.push("changerpasse")}>
-            <Ionicons name="lock-closed" size={30} color="black" />
+            <Ionicons name="lock-closed" size={30} color="white" />
             <Text style={styles.itemText}>Changer mot de passe</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.item} onPress={() => router.push("Apropos")}>
-            <Ionicons name="information-circle" size={30} color="black" />
+            <Ionicons name="information-circle" size={30} color="white" />
             <Text style={styles.itemText}>À propos</Text>
         </TouchableOpacity>
 
@@ -42,7 +42,7 @@ export default function Sidebar() {
 const styles = StyleSheet.create({
   drawer: { flex: 1, 
     paddingTop: 20, 
-    backgroundColor: "#96c0c7ff" 
+    backgroundColor:  "#0055ff", 
 },
   item: { 
     flexDirection: "row", 
@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
 },
   itemText: { 
     marginLeft: 15, 
-    fontSize: 18 
+    fontSize: 18,
+    color:"#ffff" 
 },
   rightIcon: {
     flex: 1,
